@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  width: 100%;
+  color: rgba(0,0,0,.75);
+  font-family: 'Lobster', cursive, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  top: 15%;
+  background: linear-gradient(to right, rgb(230, 100, 101), rgb(246, 183, 60));
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 2.5vw;
+}
+
+h3 {
+  font-size: 2vw;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
