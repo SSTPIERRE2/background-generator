@@ -1,12 +1,16 @@
-body {
+html, body {
   height: 100%;
   width: 100%;
+}
+
+body {
   color: rgba(0,0,0,.75);
   font-family: 'Lobster', cursive, sans-serif;
   text-transform: uppercase;
   letter-spacing: .5em;
   top: 15%;
-  background: linear-gradient(to right, rgb(230, 100, 101), rgb(246, 183, 60));
+  background: linear-gradient(to top, rgb(230, 100, 101), rgb(246, 183, 60));
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -23,9 +27,55 @@ h3 {
   text-transform: none;
 }
 
-#container {
+h4 {
+  display: inline;
+  font-size: 2.5vw;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1.5vw;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+span {
+  font-size: 1.5vw;
+  letter-spacing: 0.01em;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.directionContainer {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+}
+
+.directionSelection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1em 0 1em;
+}
+
+.upperSelector {
+  margin-bottom: 1em;
+}
+
+.degrees {
+  margin-left: 1em;
 }
