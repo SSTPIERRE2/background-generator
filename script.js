@@ -46,16 +46,31 @@ const toggleDisableElement = (element) => {
   element.disabled = !element.disabled;
 }
 
-color1.addEventListener("input", changeBackground);
-color2.addEventListener("input", changeBackground);
-
-sideOrCorner.addEventListener("input", () => {
+const toggleSideOrCornerSelectors = () => {
   toggleDisableElement(toTop);
   toggleDisableElement(toBottom);
   toggleDisableElement(toRight);
   toggleDisableElement(toLeft);
+}
+
+color1.addEventListener("input", changeBackground);
+color2.addEventListener("input", changeBackground);
+
+sideOrCorner.addEventListener("input", () => {
+  toggleSideOrCornerSelectors();
+
+  if (!degrees.disabled) {
+    toggleDisableElement(degrees);
+  }
 });
-angle.addEventListener("input", () => toggleDisableElement(degrees));
+
+angle.addEventListener("input", () => {
+  toggleDisableElement(degrees);
+
+  if (!toTop.disabled) {
+    toggleSideOrCornerSelectors();
+  }
+});
 
 toTop.addEventListener("input", changeBackground);
 toBottom.addEventListener("input", changeBackground);
